@@ -1,0 +1,16 @@
+{
+  "_id": "69d0d6dbeea8efd27dcbe7a4",
+  "name": "Priyank Kathirya",
+  "price": 224,
+  "category": "Sofa",
+  "tagline": "fdgdgd",
+  "collectionName": "General",
+  "img": "http://localhost:5000/uploads/1775294171643-330424571.webp",
+  "images": [
+    "http://localhost:5000/uploads/1775294587462-478515704.avif",
+    "http://localhost:5000/uploads/1775294184448-528218329.png"
+  ],
+  "createdAt": "2026-04-04T09:16:11.668Z",
+  "updatedAt": "2026-04-04T09:23:07.466Z",
+  "__v": 0
+}

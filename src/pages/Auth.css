@@ -1,0 +1,153 @@
+.auth-page {
+  min-height: 100vh;
+  padding: 140px 40px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-white);
+}
+
+.auth-container {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  height: 600px;
+  background: white;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  border-radius: 2px;
+  overflow: hidden;
+  border: 1px solid #EAEAEA;
+}
+
+.auth-image-side {
+  flex: 1;
+  background-image: url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-image-overlay {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(5px);
+  padding: 40px;
+  text-align: center;
+  max-width: 80%;
+  border-radius: 2px;
+}
+
+.auth-image-overlay h2 {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.auth-image-overlay p {
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+.auth-form-side {
+  flex: 1;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-form-header {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #EAEAEA;
+}
+
+.auth-tab {
+  background: none;
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #ccc;
+  padding-bottom: 15px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.auth-tab.active {
+  color: var(--text-main);
+  border-bottom-color: var(--text-main);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--text-main);
+}
+
+.form-group input {
+  padding: 14px 16px;
+  border: 1px solid #EAEAEA;
+  border-radius: 2px;
+  font-size: 0.9rem;
+  font-family: var(--font-sans);
+  color: var(--text-main);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus {
+  border-color: var(--text-main);
+}
+
+.forgot-password {
+  font-size: 0.8rem;
+  color: #888;
+  text-align: right;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.forgot-password:hover {
+  color: var(--text-main);
+  text-decoration: underline;
+}
+
+.auth-submit {
+  width: 100%;
+  padding: 16px;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  margin-top: 10px;
+}
+
+@media (max-width: 800px) {
+  .auth-image-side {
+    display: none;
+  }
+  .auth-form-side {
+    padding: 40px 20px;
+  }
+  .auth-container {
+    height: auto;
+  }
+}

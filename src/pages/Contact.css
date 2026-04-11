@@ -1,0 +1,160 @@
+.contact-page {
+  padding: 160px 40px 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-hero {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.contact-hero h1 {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  color: #4C3C36;
+  margin-bottom: 20px;
+}
+
+.contact-hero p {
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+/* Info Side */
+.contact-info-side {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.info-block h3 {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: normal;
+  margin-bottom: 20px;
+  color: var(--text-main);
+  border-bottom: 1px solid #EAEAEA;
+  padding-bottom: 15px;
+}
+
+.info-block > p {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  color: var(--text-main);
+}
+
+.detail-item p {
+  line-height: 1.5;
+  font-size: 0.95rem;
+  margin-top: -1px;
+}
+
+.hours-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 0;
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+.hours-grid .time {
+  text-align: right;
+  color: var(--text-muted);
+}
+
+/* Form Side */
+.contact-form-side h3 {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: normal;
+  margin-bottom: 35px;
+  color: var(--text-main);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: var(--text-main);
+}
+
+.form-group input, 
+.form-group textarea {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  font-size: 0.9rem;
+  font-family: var(--font-sans);
+  color: var(--text-main);
+  outline: none;
+  background-color: var(--bg-white);
+  transition: border-color 0.3s ease;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+  border-color: var(--primary);
+}
+
+.submit-btn {
+  padding: 18px;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}

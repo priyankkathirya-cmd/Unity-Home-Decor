@@ -1,0 +1,1 @@
+mongodb://priyank:<password>@ac-3egzvgz-shard-00-02.b4ntvba.mongodb.net:27017,ac-3egzvgz-shard-00-00.b4ntvba.mongodb.net:27017,ac-3egzvgz-shard-00-01.b4ntvba.mongodb.net:27017/UnityHomeDecor?ssl=true&authSource=admin&replicaSet=atlas-1n4pkb-shard-0&retryWrites=true&w=majority

@@ -1,0 +1,62 @@
+.sofa-video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height for the section */
+  background-color: var(--bg-primary); /* Use theme background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 2rem; /* Give some space above the product curations */
+}
+
+.sofa-fullscreen-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the whole area without margins */
+  opacity: 1; /* Pure 100% opacity */
+  transition: opacity 0.5s ease;
+}
+
+.sofa-fullscreen-video.hidden {
+  opacity: 0;
+}
+
+/* Loading overlay for high performance canvas preloader */
+.sofa-loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.sofa-loading-overlay p {
+  margin-top: 1.5rem;
+  font-family: var(--font-sans, sans-serif);
+  color: var(--text-main, #333);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.sofa-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top-color: var(--primary, #000);
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

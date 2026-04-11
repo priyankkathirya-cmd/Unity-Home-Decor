@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700&display=swap');
+
+/* General Utilities for Component Isolation */
+.bg-light { background-color: var(--bg-white); }
+
+.subtitle {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.description {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.section-header-center {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header-center h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-family: var(--font-serif);
+}
+
+.btn {
+  padding: 14px 28px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero Section */
+.cs-hero-light {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  min-height: calc(100vh - 80px);
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.cs-hero-content {
+  max-width: 550px;
+}
+
+.cs-hero-title {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: var(--text-main);
+}
+
+.cs-g-tagline {
+  font-family: 'Mukta', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.cs-hero-image-wrap {
+  position: relative;
+  height: 80vh;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.cs-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+.cs-hero-image.zoom-animate {
+  animation: zoomLightFade 1.2s ease 0.2s forwards;
+}
+
+@keyframes zoomLightFade {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Custom Studio Grid */
+.cs-tool-split {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 60px;
+  align-items: start;
+}
+
+.cs-preview-image-box {
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  margin-bottom: 30px;
+  background-color: var(--secondary);
+}
+
+.cs-preview-dyn-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.cs-preview-dyn-img:hover {
+  transform: scale(1.05);
+}
+
+.cs-preview-summary h4 {
+  font-family: var(--font-sans);
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--secondary);
+  padding-bottom: 10px;
+}
+
+.cs-preview-summary ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.cs-preview-summary ul li strong {
+  color: var(--text-main);
+  margin-right: 5px;
+}
+
+/* Options Panel */
+.cs-options-area {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.cs-option-set {
+  margin-bottom: 35px;
+}
+
+.cs-option-set h4 {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: var(--text-main);
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.cs-option-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cs-pill {
+  background: var(--bg-primary);
+  border: 1px solid var(--secondary);
+  color: var(--text-main);
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+.cs-pill:hover, .cs-pill.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.cs-option-colors {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.cs-color-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 0 0 1px var(--secondary);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cs-color-badge:hover, .cs-color-badge.active {
+  transform: scale(1.1);
+  box-shadow: 0 0 0 2px var(--primary);
+}
+
+.cs-btn-whatsapp {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+  font-size: 1rem;
+}
+
+/* Feature Grid */
+.cs-product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.cs-features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+
+.cs-feature-card {
+  padding: 20px;
+}
+
+.cs-icon-big {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+.cs-feature-card h4 {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.cs-feature-card .description {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+/* Photo Grid */
+.cs-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.cs-photo-grid .img-container {
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  background-color: var(--secondary);
+}
+
+.cs-photo-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.cs-photo-grid .img-container:hover img {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cs-hero-light {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 60px;
+  }
+  
+  .cs-hero-content {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .cs-hero-image-wrap {
+    height: 60vh;
+  }
+  
+  .cs-tool-split {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .cs-product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cs-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cs-photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cs-hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .cs-hero-image-wrap {
+    height: 40vh;
+  }
+
+  .cs-options-area {
+    padding: 20px;
+  }
+  
+  .cs-product-grid, .cs-features-grid {
+    grid-template-columns: 1fr;
+  }
+}
