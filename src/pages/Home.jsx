@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, ArrowLeft, Heart, ShoppingBag, ChevronDown } from 'lucide-react';
-import SofaCanvas from '../components/SofaCanvas';
+const SofaCanvas = React.lazy(() => import('../components/SofaCanvas'));
 import './Home.css';
 import ownerPhoto from '../assets/owner.jpg';
 
@@ -119,10 +119,16 @@ function Home() {
       {/* ===== HERO SECTION ===== */}
       <section className="hero-modern">
         {heroSlides.map((slide, index) => (
-          <div
+          <img
             key={index}
             className={`hero-bg-slide ${index === currentSlide ? 'active' : ''}`}
-            style={{ backgroundImage: `url(${slide.image})` }}
+            src={slide.image.replace(/w=1800|width=1800/, 'w=800')}
+            srcSet={`${slide.image.replace(/w=1800|width=1800/, 'w=800')} 800w, ${slide.image} 1800w`}
+            sizes="(max-width: 768px) 800px, 1800px"
+            alt={slide.headline}
+            loading={index === 0 ? "eager" : "lazy"}
+            fetchPriority={index === 0 ? "high" : "auto"}
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />
         ))}
         <div className="hero-modern-overlay" />
@@ -298,7 +304,15 @@ function Home() {
         viewport={{ once: true, amount: 0.4 }}
         variants={premiumReveal}
       >
-        <div className="feature-banner-bg" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=1800)' }} />
+        <img 
+          className="feature-banner-bg" 
+          src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=800" 
+          srcSet="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=800 800w, https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=1800 1800w"
+          sizes="(max-width: 768px) 800px, 1800px"
+          alt="Bespoke Design" 
+          loading="lazy" 
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+        />
         <div className="feature-banner-overlay" />
         <div className="feature-banner-content">
           <p className="section-tag" style={{ color: 'rgba(255,255,255,0.7)' }}>BESPOKE DESIGN</p>

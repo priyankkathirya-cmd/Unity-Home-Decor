@@ -101,15 +101,15 @@ function SofaModel({ size, color, fabric }) {
 
 export default function SofaCanvas({ size = '3-Seater', color = '#555', fabric = 'Velvet', interactive = true }) {
   return (
-    <Canvas camera={{ position: [5, 3, 7], fov: 45 }}>
+    <Canvas dpr={[1, 1.5]} camera={{ position: [5, 3, 7], fov: 45 }}>
       <ambientLight intensity={0.5} />
       <directionalLight position={[10, 10, 5]} intensity={1} castShadow />
       <pointLight position={[-10, -10, -10]} intensity={0.5} />
       
       <SofaModel size={size} color={color} fabric={fabric} />
       
-      <ContactShadows position={[0, -0.85, 0]} opacity={0.4} scale={15} blur={2} far={4} color="#000000" />
-      <Environment preset="city" />
+      <ContactShadows position={[0, -0.85, 0]} opacity={0.4} scale={15} blur={2} far={4} color="#000000" resolution={256} />
+      <Environment preset="city" resolution={256} />
       
       <OrbitControls 
         enableZoom={interactive} 
