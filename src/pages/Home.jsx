@@ -122,8 +122,8 @@ function Home() {
           <img
             key={index}
             className={`hero-bg-slide ${index === currentSlide ? 'active' : ''}`}
-            src={slide.image.replace(/w=1800|width=1800/, 'w=800')}
-            srcSet={`${slide.image.replace(/w=1800|width=1800/, 'w=800')} 800w, ${slide.image} 1800w`}
+            src={slide.image.replace('1800', '800')}
+            srcSet={`${slide.image.replace('1800', '800')} 800w, ${slide.image} 1800w`}
             sizes="(max-width: 768px) 800px, 1800px"
             alt={slide.headline}
             loading={index === 0 ? "eager" : "lazy"}
