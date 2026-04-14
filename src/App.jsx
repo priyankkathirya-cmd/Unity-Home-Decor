@@ -7,6 +7,7 @@ import WhatsAppButton from './components/WhatsAppButton';
 import { CartProvider } from './context/CartContext';
 import { AuthProvider } from './context/AuthContext';
 import { WishlistProvider } from './context/WishlistContext';
+import { Analytics } from '@vercel/analytics/react';
 import './App.css';
 
 // Lazy-load all pages for code splitting — massive performance improvement
@@ -103,6 +104,7 @@ function App() {
               </Suspense>
               <Footer />
               <WhatsAppButton />
+              <Analytics />
             </div>
           </Router>
         </CartProvider>
