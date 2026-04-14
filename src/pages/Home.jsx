@@ -7,13 +7,12 @@ import './Home.css';
 import ownerPhoto from '../assets/owner.jpg';
 
 const premiumReveal = {
-  hidden: { opacity: 0, y: 60, scale: 0.98, filter: 'blur(10px)' },
+  hidden: { opacity: 0, y: 40, scale: 0.98 },
   visible: { 
     opacity: 1, 
     y: 0, 
     scale: 1, 
-    filter: 'blur(0px)',
-    transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1] } 
+    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } 
   }
 };
 
@@ -21,27 +20,25 @@ const premiumStagger = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.2, delayChildren: 0.1 }
+    transition: { staggerChildren: 0.1, delayChildren: 0.1 }
   }
 };
 
 const premiumCardReveal = {
-  hidden: { opacity: 0, y: 40, filter: 'blur(5px)' },
+  hidden: { opacity: 0, y: 30 },
   visible: { 
     opacity: 1, 
     y: 0, 
-    filter: 'blur(0px)',
-    transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] } 
+    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } 
   }
 };
 
 const premiumImageReveal = {
-  hidden: { opacity: 0, scale: 1.05, filter: 'blur(10px)' },
+  hidden: { opacity: 0, scale: 1.05 },
   visible: { 
     opacity: 1, 
     scale: 1, 
-    filter: 'blur(0px)',
-    transition: { duration: 1.4, ease: [0.16, 1, 0.3, 1] } 
+    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } 
   }
 };
 
@@ -122,9 +119,9 @@ function Home() {
           <img
             key={index}
             className={`hero-bg-slide ${index === currentSlide ? 'active' : ''}`}
-            src={slide.image.replace('1800', '800')}
-            srcSet={`${slide.image.replace('1800', '800')} 800w, ${slide.image} 1800w`}
-            sizes="(max-width: 768px) 800px, 1800px"
+            src={slide.image.replace('w=1800', 'w=600').replace('q=80', 'q=60')}
+            srcSet={`${slide.image.replace('w=1800', 'w=600').replace('q=80', 'q=60')} 600w, ${slide.image} 1800w`}
+            sizes="(max-width: 768px) 600px, 1800px"
             alt={slide.headline}
             loading={index === 0 ? "eager" : "lazy"}
             fetchPriority={index === 0 ? "high" : "auto"}
