@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, ArrowLeft, Heart, ShoppingBag, ChevronDown } from 'lucide-react';
-const SofaCanvas = React.lazy(() => import('../components/SofaCanvas'));
 import './Home.css';
 import ownerPhoto from '../assets/owner.jpg';
 
@@ -320,46 +319,6 @@ function Home() {
           </button>
         </div>
       </motion.section>
-
-      {/* ===== 3D INTERACTIVE SECTION ===== */}
-      <section className="interactive-3d-section">
-        <motion.div
-          className="interactive-content"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.4 }}
-          variants={premiumReveal}
-        >
-          <span className="interactive-pill">INTERACTIVE EXPERIENCE</span>
-          <h2>Experience Comfort in <br /><span>Three Dimensions</span></h2>
-          <p>
-            Our new Minimalist Cloud Sofa is designed for ultimate relaxation. Rotate, zoom, and explore every angle of its artisanal craftsmanship right from your screen.
-          </p>
-          <ul className="interactive-features">
-            <li>Premium Italian Fabric</li>
-            <li>Solid Oak Frame</li>
-            <li>High-Density Memory Foam</li>
-          </ul>
-          <button className="btn btn-primary" onClick={() => navigate('/custom-sofa')} style={{ padding: '15px 30px', fontWeight: 'bold' }}>
-            Launch Configurator
-          </button>
-        </motion.div>
-
-        <motion.div
-          className="interactive-canvas-container"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.4 }}
-          variants={premiumImageReveal}
-        >
-          <React.Suspense fallback={<div style={{ color: '#999' }}>Loading 3D Model...</div>}>
-            <SofaCanvas />
-          </React.Suspense>
-          <div className="drag-indicator">
-            <span className="dot"></span> DRAG TO ROTATE
-          </div>
-        </motion.div>
-      </section>
 
       {/* ===== FOUNDER / TESTIMONIAL ===== */}
       <motion.section
