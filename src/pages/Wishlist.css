@@ -125,3 +125,54 @@
 .btn-remove:hover {
   background: #ffebee;
 }
+
+@media (max-width: 768px) {
+  .wishlist-page {
+    padding-top: 100px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .wishlist-header {
+    margin-bottom: 30px;
+  }
+
+  .wishlist-header h1 {
+    font-size: 2rem;
+  }
+
+  .wishlist-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .wishlist-info {
+    padding: 12px 14px;
+  }
+
+  .wishlist-info h3 {
+    font-size: 0.9rem;
+  }
+
+  .wishlist-info .price {
+    font-size: 0.88rem;
+    margin-bottom: 12px;
+  }
+
+  .wishlist-actions {
+    gap: 8px;
+  }
+
+  .btn-add-cart {
+    padding: 8px;
+    font-size: 0.75rem;
+  }
+
+  .btn-remove {
+    width: 36px;
+  }
+
+  .empty-wishlist {
+    padding: 50px 16px;
+  }
+}

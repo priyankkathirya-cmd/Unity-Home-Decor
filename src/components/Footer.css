@@ -77,3 +77,58 @@
 .footer-social a:hover {
   color: var(--text-main);
 }
+
+@media (max-width: 768px) {
+  .footer {
+    padding-top: 40px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-bottom: 30px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .footer-brand h2 {
+    font-size: 1.4rem;
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .link-group h4 {
+    margin-bottom: 14px;
+    font-size: 0.72rem;
+  }
+
+  .link-group ul li {
+    margin-bottom: 10px;
+  }
+
+  .link-group ul li a {
+    font-size: 0.82rem;
+  }
+
+  .bottom-bar {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    padding: 20px 16px;
+  }
+
+  .bottom-bar p {
+    font-size: 0.75rem;
+  }
+
+  .footer-social {
+    gap: 16px;
+  }
+
+  .footer-social a {
+    font-size: 0.8rem;
+  }
+}

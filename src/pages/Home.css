@@ -864,8 +864,27 @@
 }
 
 @media (max-width: 768px) {
+  /* — Hero — */
+  .hero-modern {
+    height: 100svh;
+    min-height: 550px;
+  }
+
+  .hero-text-block {
+    left: 5%;
+    right: 5%;
+    top: 40%;
+  }
+
   .hero-headline {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
+    letter-spacing: -1px;
+  }
+
+  .hero-subline {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    margin-top: 8px;
   }
 
   .hero-product-card {
@@ -876,53 +895,244 @@
     display: none;
   }
 
-  .catalog-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-
-  .feature-banner {
-    height: 400px;
-  }
-
-  .feature-banner-content h2 {
-    font-size: 2rem;
-  }
-
-  .interactive-3d-section {
-    flex-direction: column;
-    padding: 60px 5%;
-  }
-
-  .interactive-canvas-container {
-    width: 100%;
-    margin-top: 40px;
-  }
-  
-  .section-title-lg {
-    font-size: 2rem;
-  }
-
-  .section-container {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-headline {
-    font-size: 2rem;
-  }
-
+  /* Nav controls — centered at bottom */
   .hero-nav-controls {
-    right: 4%;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 28px;
   }
 
-  .catalog-grid {
-    grid-template-columns: 1fr;
+  .hero-nav-arrow {
+    width: 38px;
+    height: 38px;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+
+  /* — Sections general — */
+  .section-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .section-title-lg {
+    font-size: 1.8rem;
+  }
+
+  .section-tag {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+  }
+
+  .categories-header,
+  .catalog-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  /* — Categories — */
+  .categories-strip {
+    padding: 50px 0;
   }
 
   .categories-scroll {
     gap: 14px;
+    padding-bottom: 6px;
+  }
+
+  .cat-card {
+    min-width: 160px;
+    border-radius: 12px;
+  }
+
+  .cat-card-info {
+    padding: 12px 14px;
+  }
+
+  .cat-card-info h4 {
+    font-size: 0.85rem;
+  }
+
+  /* — Catalog — */
+  .catalog-section {
+    padding: 50px 0;
+  }
+
+  .catalog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .catalog-card {
+    border-radius: 12px;
+  }
+
+  .catalog-card-info {
+    padding: 12px 14px 14px;
+  }
+
+  .catalog-card-info h3 {
+    font-size: 0.88rem;
+  }
+
+  .catalog-card-info p {
+    font-size: 0.82rem;
+  }
+
+  .catalog-tag {
+    font-size: 0.55rem;
+    padding: 4px 8px;
+    top: 10px;
+    left: 10px;
+  }
+
+  /* — Feature Banner — */
+  .feature-banner {
+    height: 380px;
+  }
+
+  .feature-banner-bg {
+    background-attachment: scroll;
+  }
+
+  .feature-banner-content {
+    padding: 0 20px;
+  }
+
+  .feature-banner-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 14px;
+  }
+
+  .feature-desc {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+
+  .btn-feature {
+    padding: 12px 24px;
+    font-size: 0.78rem;
+  }
+
+  /* — Testimonial — */
+  .testimonial-section {
+    padding: 50px 16px !important;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .testimonial-content {
+    padding: 0;
+  }
+
+  .testimonial-content blockquote {
+    font-size: 1.35rem;
+    margin-bottom: 24px;
+  }
+
+  .stars {
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-modern {
+    height: 100svh;
+    min-height: 500px;
+  }
+
+  .hero-text-block {
+    top: 38%;
+  }
+
+  .hero-headline {
+    font-size: 2rem;
+    letter-spacing: -0.5px;
+  }
+
+  .hero-subline {
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+  }
+
+  .hero-nav-controls {
+    bottom: 22px;
+    gap: 12px;
+  }
+
+  .hero-nav-arrow {
+    width: 34px;
+    height: 34px;
+  }
+
+  .hero-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .hero-dot.active {
+    width: 22px;
+  }
+
+  .section-title-lg {
+    font-size: 1.5rem;
+  }
+
+  .catalog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .catalog-card-info {
+    padding: 10px 10px 12px;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .catalog-card-info h3 {
+    font-size: 0.8rem;
+  }
+
+  .catalog-card-info p {
+    font-size: 0.78rem;
+  }
+
+  .categories-scroll {
+    gap: 10px;
+  }
+
+  .cat-card {
+    min-width: 140px;
+  }
+
+  .feature-banner {
+    height: 320px;
+  }
+
+  .feature-banner-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .feature-desc {
+    font-size: 0.82rem;
+  }
+
+  .testimonial-content blockquote {
+    font-size: 1.15rem;
+  }
+
+  .testimonial-image img {
+    aspect-ratio: 1/1;
+    border-radius: 12px;
   }
 }

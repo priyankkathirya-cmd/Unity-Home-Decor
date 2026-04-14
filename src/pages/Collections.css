@@ -576,25 +576,148 @@
 }
 
 @media (max-width: 768px) {
+  .collections-page {
+    padding: 100px 14px 50px;
+  }
+
+  .minimal-collections-header {
+    margin-bottom: 30px;
+    padding: 20px 0 10px;
+  }
+
+  .shop-title {
+    font-size: 2rem;
+    gap: 10px;
+  }
+
+  .circle-decorator {
+    width: 22px;
+    height: 22px;
+  }
+
+  .page-desc {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .minimal-category-pills {
+    gap: 8px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 6px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .minimal-category-pills::-webkit-scrollbar {
+    display: none;
+  }
+
+  .minimal-pill {
+    padding: 8px 18px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
   .collections-layout {
     flex-direction: column;
+    gap: 0;
   }
 
   .filters-sidebar {
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    padding: 20px 18px;
+    border-radius: 12px;
+  }
+
+  .smart-search-container {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .smart-search-box {
+    height: 44px;
+    padding: 0 14px;
+  }
+
+  .smart-filter-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .results-bar {
+    padding-bottom: 12px;
+    margin-bottom: 20px;
   }
 
   .products-grid-3 {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 
-  .collections-page {
-    padding: 120px 20px 60px;
+  .collection-product-card .product-img-wrapper {
+    margin-bottom: 12px;
+    border-radius: 10px;
+  }
+
+  .product-info-minimal h3 {
+    font-size: 0.9rem;
+  }
+
+  .product-price {
+    font-size: 0.85rem;
+  }
+
+  .product-cat {
+    font-size: 0.65rem;
+  }
+
+  .product-info-minimal .info-main {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  /* Make product actions always visible on mobile (no hover) */
+  .product-actions {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 100px;
+    margin-top: 10px;
+  }
+
+  .mini-qty-selector {
+    height: 34px;
+  }
+
+  .add-cart-btn {
+    height: 34px;
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+  }
+
+  .pagination {
+    margin-top: 40px;
+    padding-top: 20px;
+    gap: 16px;
   }
 
   .collections-header h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+
+  .wishlist-toggle-btn {
+    width: 32px;
+    height: 32px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .gallery-arrow {
+    width: 28px;
+    height: 28px;
+    margin: 0 6px;
   }
 }
 

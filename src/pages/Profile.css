@@ -380,16 +380,28 @@
 }
 
 @media (max-width: 900px) {
+  .profile-page {
+    padding: 100px 14px 50px;
+  }
+
+  .profile-header {
+    margin-bottom: 30px;
+  }
+
+  .profile-header h1 {
+    font-size: 1.8rem;
+  }
+
   .profile-layout {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 24px;
   }
   
   .profile-sidebar {
     border-right: none;
     border-bottom: 1px solid rgba(0,0,0,0.05);
     padding-right: 0;
-    padding-bottom: 20px;
+    padding-bottom: 14px;
   }
   
   .profile-nav {
@@ -397,36 +409,99 @@
     overflow-x: auto;
     position: relative;
     top: 0;
+    gap: 8px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .profile-nav::-webkit-scrollbar {
+    display: none;
   }
   
   .profile-nav-link {
     white-space: nowrap;
     padding: 10px 16px;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+
+  .order-history-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .order-card-header {
+    padding: 16px 18px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .order-id {
+    font-size: 0.9rem;
   }
 
   .order-body-content {
     grid-template-columns: 1fr;
-    gap: 25px;
+    gap: 20px;
+    padding: 18px;
+  }
+
+  .item-details-left {
+    gap: 12px;
+  }
+
+  .item-img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .order-item-name {
+    font-size: 0.9rem;
+  }
+
+  .order-item-price {
+    font-size: 0.95rem;
   }
 
   .order-timeline {
-    padding: 20px;
+    padding: 16px 12px;
     overflow-x: auto;
   }
 
   .order-timeline::before {
-    left: 30px;
-    right: 30px;
+    left: 20px;
+    right: 20px;
+  }
+
+  .step-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 0.85rem;
   }
 
   .step-label {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 
   .order-card-footer {
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
     align-items: flex-start;
+    padding: 16px 18px;
+  }
+
+  .order-total {
+    font-size: 1.1rem;
+  }
+
+  .track-btn {
+    padding: 8px 18px;
+    font-size: 0.78rem;
+  }
+
+  .empty-orders {
+    padding: 50px 20px;
   }
 }
 
