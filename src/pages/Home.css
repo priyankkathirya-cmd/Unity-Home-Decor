@@ -817,6 +817,36 @@
   font-size: 0.9rem;
 }
 
+/* SEO Content Section */
+.seo-content-section {
+  padding: 60px 0 20px 0;
+  margin-top: 40px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.seo-content-grid {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.seo-content-grid h2 {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.seo-content-grid p {
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
 /* WhatsApp Button */
 .whatsapp-btn {
   width: 50px;

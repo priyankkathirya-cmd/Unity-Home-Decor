@@ -344,6 +344,19 @@ function Home() {
           </div>
         </div>
       </motion.section>
+
+      {/* ===== SEO TEXT CONTENT ===== */}
+      <section className="seo-content-section section-container">
+        <div className="seo-content-grid">
+          <h2>Premium Modern Furniture & Aesthetic Home Decor</h2>
+          <p>
+            Welcome to Unity Home Decor, your distinguished destination to buy furniture online. We offer an exclusive, curated collection of luxury furniture and modern home decor meticulously designed to elevate your living spaces. Whether you are searching for minimalist modern sofas, sculptural lounge chairs, or timeless bedroom collections, our aesthetic furniture provides unparalleled quality, comfort, and style.
+          </p>
+          <p>
+            Transform your home with our bespoke design options, premium materials including top-grain Italian leather and solid reclaimed oak, and cutting-edge interior design trends. Experience the art of living well with high-end, contemporary furnishings that turn everyday rooms into extraordinary sanctuaries. Shop our premium collections today and discover why we are the leading choice for aesthetic modern living.
+          </p>
+        </div>
+      </section>
     </main>
   );
 }
