@@ -95,14 +95,15 @@ function Auth() {
                   </>
                 )}
                 <div className="form-group">
-                   <label>EMAIL ADDRESS</label>
-                   <input type="email" name="email" placeholder="Enter your email" required value={formData.email} onChange={handleInputChange} />
+                   <label>{isLogin ? 'EMAIL OR PHONE NUMBER' : 'EMAIL ADDRESS'}</label>
+                   <input type={isLogin ? "text" : "email"} name="email" placeholder={isLogin ? 'Enter your email or phone number' : 'Enter your email'} required value={formData.email} onChange={handleInputChange} />
                 </div>
-                {/* Phone number field for both login and register */}
-                <div className="form-group">
-                   <label>PHONE NUMBER</label>
-                   <input type="tel" name="phone" placeholder="Enter your 10-digit mobile number" required value={formData.phone} onChange={handleInputChange} />
-                </div>
+                {!isLogin && (
+                  <div className="form-group">
+                     <label>PHONE NUMBER</label>
+                     <input type="tel" name="phone" placeholder="Enter your 10-digit mobile number" required value={formData.phone} onChange={handleInputChange} />
+                  </div>
+                )}
                 <div className="form-group">
                    <label>PASSWORD</label>
                    <input type="password" name="password" placeholder="Enter your password" required value={formData.password} onChange={handleInputChange} />

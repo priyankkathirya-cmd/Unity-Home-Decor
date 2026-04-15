@@ -40,25 +40,34 @@ router.post('/register', async (req, res) => {
 // Login (dummy check)
 router.post('/login', async (req, res) => {
   try {
-    const { email, password, phone } = req.body;
-    const user = await User.findOne({ email });
+    const { email, password } = req.body;
+    
+    if (!email || !password) {
+      return res.status(400).json({ message: 'Email/Phone and password are required' });
+    }
+
+    let identifier = email.trim();
+    let formattedPhone = identifier.replace(/\s+/g, '');
+    
+    if (formattedPhone.startsWith('91') && formattedPhone.length === 12) {
+      formattedPhone = '+' + formattedPhone;
+    } else if (!formattedPhone.startsWith('+91') && formattedPhone.length === 10) {
+      formattedPhone = '+91' + formattedPhone;
+    }
+
+    const user = await User.findOne({
+      $or: [
+        { email: identifier },
+        { phone: identifier },
+        { phone: formattedPhone }
+      ]
+    });
+
     if (!user) {
       return res.status(404).json({ message: 'User not found' });
     }
     if (user.password !== password) {
       return res.status(401).json({ message: 'Invalid password' });
-    }
-
-    // Update phone number on every login if provided
-    if (phone) {
-      let formattedPhone = phone.replace(/\s+/g, '');
-      if (formattedPhone.startsWith('91') && formattedPhone.length === 12) {
-        formattedPhone = '+' + formattedPhone;
-      } else if (!formattedPhone.startsWith('+91')) {
-        formattedPhone = '+91' + formattedPhone.replace(/^\+/, '');
-      }
-      user.phone = formattedPhone;
-      await user.save();
     }
 
     res.json({ message: 'Logged in successfully', user });
